@@ -9004,6 +9004,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C177337"
+			(at 344.17 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cacc99f0-2e4e-493c-bfc0-0cd328db8343")
 		)
@@ -9024,7 +9033,7 @@
 		(at 139.7 205.74 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -9064,6 +9073,15 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
+			(at 139.7 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
 			(at 139.7 205.74 0)
 			(effects
 				(font
@@ -9276,6 +9294,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C1590"
+			(at 309.88 44.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "94587a30-f4f6-49d2-b1ca-5094a0961caf")
 		)
@@ -9337,6 +9364,15 @@
 		)
 		(property "Description" "Resistor, US symbol"
 			(at 205.74 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C177337"
+			(at 205.74 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9431,7 +9467,7 @@
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "135fd297-0a70-4d9a-bc39-1ef887f94ab8")
@@ -9473,6 +9509,15 @@
 			)
 		)
 		(property "Description" "test point (alternative probe-style design)"
+			(at 213.36 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
 			(at 213.36 64.77 0)
 			(effects
 				(font
@@ -9546,6 +9591,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C177348"
+			(at 73.66 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5e42dde1-a163-4965-98e2-04164a7439f3")
 		)
@@ -9609,6 +9663,15 @@
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 68.58 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C87038"
+			(at 68.58 215.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9883,6 +9946,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C22365427"
+			(at 224.79 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8918f0ae-f5d8-4d10-b8d9-b165b00266ba")
 		)
@@ -10026,6 +10098,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C177343"
+			(at 349.25 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4c6d3131-0db1-4324-835a-93c00a956674")
 		)
@@ -10089,6 +10170,15 @@
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 316.23 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C72443"
+			(at 316.23 170.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10166,6 +10256,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C1592"
+			(at 215.9 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "90cbbf71-702e-4c73-ab37-5514810ad612")
 		)
@@ -10186,7 +10285,7 @@
 		(at 238.76 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -10226,6 +10325,15 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
+			(at 238.76 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
 			(at 238.76 132.08 0)
 			(effects
 				(font
@@ -10578,6 +10686,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2288"
+			(at 99.06 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "eccad9c8-c423-4537-aaee-cb76b5a92efc")
 		)
@@ -10705,6 +10822,15 @@
 		)
 		(property "Description" "capacitor, US symbol"
 			(at 191.77 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C1590"
+			(at 191.77 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10840,6 +10966,15 @@
 			)
 		)
 		(property "Description" "RF Module, ESP32-S3 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 3.3V, onboard antenna, SMD"
+			(at 316.23 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2913199"
 			(at 316.23 82.55 0)
 			(effects
 				(font
@@ -11044,6 +11179,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2288"
+			(at 87.63 189.23 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "112b8108-5b2b-44ac-bc8c-afccc772a9b1")
 		)
@@ -11106,6 +11250,15 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, US symbol"
+			(at 238.76 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C90975"
 			(at 238.76 38.1 0)
 			(effects
 				(font
@@ -11184,6 +11337,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C177343"
+			(at 110.49 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6467d5c5-fe95-4925-acab-df4c11a160a2")
 		)
@@ -11245,6 +11407,15 @@
 		)
 		(property "Description" "Resistor, US symbol"
 			(at 73.66 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C177348"
+			(at 73.66 46.99 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11520,6 +11691,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C295747"
+			(at 252.73 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8b219d14-704f-4b01-a170-4860c8ce6d56")
 		)
@@ -11582,6 +11762,15 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
+			(at 254 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
 			(at 254 196.85 0)
 			(effects
 				(font
@@ -11674,6 +11863,15 @@
 		)
 		(property "Sim.Pins" "1=D 2=G 3=S"
 			(at 196.85 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C7202986"
+			(at 196.85 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11952,6 +12150,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C1592"
+			(at 309.88 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f2839b34-7ad9-46df-a59f-69e613f79d50")
 		)
@@ -12014,6 +12221,15 @@
 		)
 		(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
 			(at 205.74 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C12558"
+			(at 205.74 64.77 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12107,7 +12323,7 @@
 		(at 233.68 199.39 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "75613950-5983-4190-807d-aee2f1a1fc22")
@@ -12149,6 +12365,15 @@
 			)
 		)
 		(property "Description" "test point (alternative probe-style design)"
+			(at 233.68 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
 			(at 233.68 199.39 0)
 			(effects
 				(font
@@ -12224,6 +12449,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C1713"
+			(at 261.62 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "78aa79d1-cf9c-4971-9358-4d0708a81f0b")
 		)
@@ -12286,6 +12520,15 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 182.88 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C177337"
 			(at 182.88 71.12 0)
 			(effects
 				(font
@@ -12423,6 +12666,15 @@
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 53.34 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C87038"
+			(at 53.34 215.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12894,6 +13146,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C1713"
+			(at 309.88 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2fb84f52-c6ee-43bf-89f7-334a7691b0a9")
 		)
@@ -13030,6 +13291,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C1746"
+			(at 73.66 124.46 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "680f681d-8b21-4fb6-a799-377ab82c20e9")
 		)
@@ -13090,6 +13360,15 @@
 			)
 		)
 		(property "Description" "USB 2.0-only 16P Type-C Receptacle connector"
+			(at 43.18 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C165948"
 			(at 43.18 54.61 0)
 			(effects
 				(font
@@ -13213,6 +13492,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C87038"
+			(at 38.1 215.9 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a6d81c5c-a929-4d38-80e9-c5809ab72464")
 		)
@@ -13276,6 +13564,15 @@
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 344.17 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C72443"
+			(at 344.17 184.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13680,6 +13977,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C177348"
+			(at 72.39 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "66dfd5c1-0d3a-4dcd-9232-c962d6a93d30")
 		)
@@ -13818,6 +14124,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C14879"
+			(at 85.09 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e64923a4-f481-450e-8460-6aa211b428c7")
 		)
@@ -13889,6 +14204,15 @@
 			)
 		)
 		(property "Description" "capacitor, US symbol"
+			(at 129.54 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C1746"
 			(at 129.54 139.7 0)
 			(effects
 				(font
@@ -14099,6 +14423,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" ""
+			(at 267.97 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project "finalized-bluetooth-remote"
 				(path "/301f6cf5-fe0f-42f8-a1e0-c5719449e7d1"
@@ -14155,6 +14488,15 @@
 			)
 		)
 		(property "Description" "capacitor, US symbol"
+			(at 121.92 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C1590"
 			(at 121.92 139.7 0)
 			(effects
 				(font
@@ -14233,6 +14575,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C177291"
+			(at 170.18 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e47b3320-5eb9-46fd-8d66-2ee32eb9d31d")
 		)
@@ -14303,6 +14654,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" ""
+			(at 267.97 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project "finalized-bluetooth-remote"
 				(path "/301f6cf5-fe0f-42f8-a1e0-c5719449e7d1"
@@ -14317,7 +14677,7 @@
 		(at 187.96 208.28 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -14357,6 +14717,15 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 187.96 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
 			(at 187.96 208.28 0)
 			(effects
 				(font
@@ -14459,6 +14828,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C1592"
+			(at 252.73 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b906db85-ed07-40dd-bea1-38ac8ec40c0a")
 		)
@@ -14538,6 +14916,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2288"
+			(at 100.33 189.23 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fc39d645-9649-4025-9559-c26515c35b9e")
 		)
@@ -14598,6 +14985,15 @@
 			)
 		)
 		(property "Description" "1MHz, Low-Power Op Amp, SOT-23-5"
+			(at 187.96 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C21403"
 			(at 187.96 129.54 0)
 			(effects
 				(font
@@ -14685,6 +15081,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C283866"
+			(at 233.68 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4aeeffa6-0328-419a-b984-1dcacd40b9bc")
 		)
@@ -14745,6 +15150,15 @@
 			)
 		)
 		(property "Description" "40V 0.5A Schottky Power Rectifier Diode, SOD-123"
+			(at 190.5 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C77337"
 			(at 190.5 64.77 0)
 			(effects
 				(font
@@ -14821,6 +15235,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C177348"
+			(at 300.99 162.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "34fe01e3-7c5d-4900-b7f3-0080abf8fba3")
 		)
@@ -14881,6 +15304,15 @@
 			)
 		)
 		(property "Description" "Ultra low capacitance double rail-to-rail ESD protection diode, SOT-143"
+			(at 118.11 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2827688"
 			(at 118.11 58.42 0)
 			(effects
 				(font
@@ -15097,6 +15529,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C177343"
+			(at 87.63 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0466ed4e-5d98-4898-96a2-485b37b3226c")
 		)
@@ -15160,6 +15601,15 @@
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 22.86 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C87038"
+			(at 22.86 215.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15320,7 +15770,7 @@
 		(at 233.68 217.17 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "e53bf73f-1481-4650-b651-74140f79b566")
@@ -15362,6 +15812,15 @@
 			)
 		)
 		(property "Description" "test point (alternative probe-style design)"
+			(at 233.68 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
 			(at 233.68 217.17 0)
 			(effects
 				(font
@@ -15437,6 +15896,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C177343"
+			(at 100.33 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "51848faf-e650-4825-8b83-e045494ca8b3")
 		)
@@ -15457,7 +15925,7 @@
 		(at 220.98 217.17 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "e6f5bcb7-db61-44dc-bd2f-1f5d2278bf42")
@@ -15499,6 +15967,15 @@
 			)
 		)
 		(property "Description" "test point (alternative probe-style design)"
+			(at 220.98 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
 			(at 220.98 217.17 0)
 			(effects
 				(font
@@ -15574,6 +16051,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" ""
+			(at 254 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project ""
 				(path "/301f6cf5-fe0f-42f8-a1e0-c5719449e7d1"
@@ -15588,7 +16074,7 @@
 		(at 220.98 199.39 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "eef36927-a2dd-4915-bc31-5dd0502101e4")
@@ -15630,6 +16116,15 @@
 			)
 		)
 		(property "Description" "test point (alternative probe-style design)"
+			(at 220.98 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
 			(at 220.98 199.39 0)
 			(effects
 				(font
@@ -15903,6 +16398,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C1590"
+			(at 336.55 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d661ee2b-2958-4eea-b38b-0f5cdc611e4a")
 		)
@@ -16097,6 +16601,15 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 170.18 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C177337"
 			(at 170.18 118.11 0)
 			(effects
 				(font
