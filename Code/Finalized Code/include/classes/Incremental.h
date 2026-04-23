@@ -1,5 +1,4 @@
-#ifndef INCREMENTAL_H
-#define INCREMENTAL_H
+#pragma once
 
 class Incremental {
   public:
@@ -9,5 +8,3 @@ class Incremental {
     void increment(int addend = 1);
     void reset(int new_value = 0);
 };
-
-#endif

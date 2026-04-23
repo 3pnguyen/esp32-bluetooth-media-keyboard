@@ -1,5 +1,4 @@
-#ifndef CHANGEDETECTOR_H
-#define CHANGEDETECTOR_H
+#pragma once
 
 template <typename T>
 class ChangeDetector {
@@ -13,5 +12,3 @@ class ChangeDetector {
       T get() const;
       void reset(T value);
 };
-
-#endif

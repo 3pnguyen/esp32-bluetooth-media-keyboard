@@ -1,5 +1,6 @@
-#ifndef TIMEDEOUNCE_H
-#define TIMEDEBOUNCE_H
+#pragma once
+
+#include <Arduino.h>
 
 class TimeDebounce {
   private:
@@ -14,5 +15,3 @@ class TimeDebounce {
     bool update();
     bool isPressed();
 };
-
-#endif

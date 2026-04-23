@@ -1,5 +1,6 @@
-#ifndef INTERVALTIMER_H
-#define INTERVALTIMER_H
+#pragma once
+
+#include <Arduino.h>
 
 class IntervalTimer {
   private:
@@ -11,5 +12,3 @@ class IntervalTimer {
     bool isReady();
     void reset();
 };
-
-#endif

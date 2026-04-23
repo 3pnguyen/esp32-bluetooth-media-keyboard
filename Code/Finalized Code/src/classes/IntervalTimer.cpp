@@ -1,5 +1,4 @@
-#include <Arduino.h>
-#include "IntervalTimer.h"
+#include "classes/IntervalTimer.h"
 
 IntervalTimer::IntervalTimer(unsigned long intervalMs) : interval(intervalMs) {}
 

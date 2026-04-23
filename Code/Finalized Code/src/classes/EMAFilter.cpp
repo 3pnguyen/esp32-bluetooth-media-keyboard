@@ -1,4 +1,4 @@
-#include "EMAFilter.h"
+#include "classes/EMAFilter.h"
 
 template <class T>
 EMAFilter<T>::EMAFilter(float smoothingFactor, T thresholdValue) : alpha(smoothingFactor), alpha2(smoothingFactor), threshold(thresholdValue) {}

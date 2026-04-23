@@ -1,5 +1,4 @@
-#ifndef EMAFILTER_H
-#define EMAFILTER_H
+#pragma once
 
 template <typename T>
 class EMAFilter {
@@ -15,5 +14,3 @@ class EMAFilter {
     void reset();
     bool aboveThreshold ();
 };
-
-#endif

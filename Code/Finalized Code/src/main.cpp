@@ -1,15 +1,16 @@
 #include <Arduino.h>
 #include <BleCombo.h>
 #include <esp_sleep.h>
+#include "battery.h"
 #include "pins.h"
 #include "functions.h"
-#include "TimeDebounce.h"
-#include "ReleaseDebounce.h"
-#include "IntervalTimer.h"
-#include "Incremental.h"
-#include "ChangeDetector.h"
-#include "battery.h"
-#include "EMAFilter.h"
+
+#include "classes/TimeDebounce.h"
+#include "classes/ReleaseDebounce.h"
+#include "classes/IntervalTimer.h"
+#include "classes/Incremental.h"
+#include "classes/ChangeDetector.h"
+#include "classes/EMAFilter.h"
 
 //#define TEST
 

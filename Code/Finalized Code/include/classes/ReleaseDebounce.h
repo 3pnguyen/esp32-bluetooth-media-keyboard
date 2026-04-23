@@ -1,5 +1,6 @@
-#ifndef RELEASEDEBOUNCE_H
-#define RELEASEDEBOUNCE_H
+#pragma once
+
+#include <Arduino.h>
 
 class ReleaseDebounce {
   private:
@@ -11,5 +12,3 @@ class ReleaseDebounce {
     bool update();
     bool isPressed();
 };
-
-#endif

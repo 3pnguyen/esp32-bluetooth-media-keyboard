@@ -2,6 +2,9 @@
 #define FUNCTIONS_H
 
 #include <Arduino.h>
+#include <BleCombo.h>
+#include <esp_sleep.h>
+#include "pins.h"
 
 void wakeUp();
 void goToSleep();

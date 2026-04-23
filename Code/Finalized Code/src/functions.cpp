@@ -1,8 +1,4 @@
-#include <Arduino.h>
-#include <BleCombo.h>
-#include <esp_sleep.h>
 #include "functions.h"
-#include "pins.h"
 
 void wakeUp() {
   delay(20);

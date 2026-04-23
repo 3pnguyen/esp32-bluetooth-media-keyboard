@@ -1,5 +1,4 @@
-#include <Arduino.h>
-#include "TimeDebounce.h"
+#include "classes/TimeDebounce.h"
 
 //debounce classes done by chatgpt lol
 
