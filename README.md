@@ -16,7 +16,7 @@ placeholder
         </tr>
         <tr>
             <td> <img src="Schematics/Prototype Schematic (V1)/images/schematic.png" width="450" /> </td>
-            <td> <img src="Schematics/Finalized Schematic (V2)/images/images/Schematic.png" width="450" /> </td>
+            <td> <img src="Schematics/Finalized Schematic (V2)/images/Schematic.png" width="450" /> </td>
         </tr>
     </table>
 </div>
