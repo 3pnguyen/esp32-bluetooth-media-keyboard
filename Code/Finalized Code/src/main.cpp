@@ -6,7 +6,6 @@
 #include "pins.h"
 #include "functions.h"
 
-#include "classes/TimeDebounce.h"
 #include "classes/ReleaseDebounce.h"
 #include "classes/IntervalTimer.h"
 #include "classes/Incremental.h"
