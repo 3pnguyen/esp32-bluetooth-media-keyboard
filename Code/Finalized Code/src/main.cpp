@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <BleCombo.h>
+#include <driver/gpio.h>
 #include <esp_sleep.h>
 #include "battery.h"
 #include "pins.h"
@@ -13,6 +14,8 @@
 
 void wakeUp();
 void goToSleep();
+void setIndicatorLedsOff();
+void setIndicatorLedHold(bool enabled);
 void pressMediaKey(const uint8_t *key, String keyName = "", int debounce = 50);
 int voltageToPercent(float v);
 
@@ -43,6 +46,7 @@ void setup() {
   pinMode(INDICATOR_LED_R, OUTPUT);
   pinMode(INDICATOR_LED_G, OUTPUT);
   pinMode(INDICATOR_LED_B, OUTPUT);
+  setIndicatorLedsOff();
 
   Serial.begin(115200);
   Serial.println("\nBegin\n");
@@ -55,6 +59,7 @@ void setup() {
   } else {
     Serial.println("Lid closed – go back to sleep immediately");
     goToSleep();
+    wakeUp();
   }
 }
 
@@ -73,7 +78,7 @@ void loop() {
   }
 
   if (Keyboard.isConnected()) {
-    if (digitalRead(INDICATOR_LED_B) == HIGH) digitalWrite(INDICATOR_LED_B, LOW);
+    digitalWrite(INDICATOR_LED_B, LOW);
 
     if (battery_level_update.isReady()) Keyboard.setBatteryLevel(percent);
     
@@ -109,8 +114,11 @@ void loop() {
     #endif
 
   } else {
+    digitalWrite(INDICATOR_LED_R, LOW);
+    digitalWrite(INDICATOR_LED_G, LOW);
+
     if (bluetooth_led_flash.isReady()) digitalWrite(INDICATOR_LED_B, (digitalRead(INDICATOR_LED_B) == HIGH) ? LOW : HIGH);
-    if (digitalRead(INDICATOR_LED_G) == HIGH) digitalWrite(INDICATOR_LED_G, LOW);
+
     if (null_reconnection.isReady()) {
       null_reconnection.reset();
       ESP.restart();
@@ -121,17 +129,47 @@ void loop() {
 }
 
 void wakeUp() {
+  setIndicatorLedHold(false);
+  setIndicatorLedsOff();
+  bluetooth_led_flash.reset();
+  indicator_led_flash.reset();
+  null_reconnection.reset();
   delay(20);
   Keyboard.begin();
+  setIndicatorLedsOff();
 }
 
 void goToSleep() {
   Serial.println("Entering sleep…");
   Serial.flush();
+  setIndicatorLedsOff();
   Keyboard.end();
+  setIndicatorLedsOff();
+  setIndicatorLedHold(true);
   gpio_wakeup_enable((gpio_num_t)SLEEP_BUTTON, GPIO_INTR_HIGH_LEVEL);
   esp_sleep_enable_gpio_wakeup();
   esp_light_sleep_start();
+  setIndicatorLedHold(false);
+  setIndicatorLedsOff();
+  gpio_wakeup_disable((gpio_num_t)SLEEP_BUTTON);
+}
+
+void setIndicatorLedsOff() {
+  digitalWrite(INDICATOR_LED_R, LOW);
+  digitalWrite(INDICATOR_LED_G, LOW);
+  digitalWrite(INDICATOR_LED_B, LOW);
+}
+
+void setIndicatorLedHold(bool enabled) {
+  if (enabled) {
+    gpio_hold_en((gpio_num_t)INDICATOR_LED_R);
+    gpio_hold_en((gpio_num_t)INDICATOR_LED_G);
+    gpio_hold_en((gpio_num_t)INDICATOR_LED_B);
+  } else {
+    gpio_hold_dis((gpio_num_t)INDICATOR_LED_R);
+    gpio_hold_dis((gpio_num_t)INDICATOR_LED_G);
+    gpio_hold_dis((gpio_num_t)INDICATOR_LED_B);
+  }
 }
 
 void pressMediaKey(const uint8_t *key, String keyName, int debounce) {
