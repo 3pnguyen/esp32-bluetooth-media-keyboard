@@ -15,3 +15,10 @@ bool IntervalTimer::isReady() {
 void IntervalTimer::reset() {
   lastTime = millis();
 }
+
+// ----------------------------------------------------- Objects -----------------------------------------------------
+
+IntervalTimer bluetooth_led_flash(300);
+IntervalTimer indicator_led_flash(150);
+IntervalTimer null_reconnection(3000);
+IntervalTimer battery_level_update(1000);

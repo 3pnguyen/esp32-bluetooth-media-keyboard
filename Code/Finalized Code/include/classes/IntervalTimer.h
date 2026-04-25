@@ -12,3 +12,10 @@ class IntervalTimer {
     bool isReady();
     void reset();
 };
+
+// ----------------------------------------------------- Objects -----------------------------------------------------
+
+extern IntervalTimer bluetooth_led_flash;
+extern IntervalTimer indicator_led_flash;
+extern IntervalTimer null_reconnection;
+extern IntervalTimer battery_level_update;

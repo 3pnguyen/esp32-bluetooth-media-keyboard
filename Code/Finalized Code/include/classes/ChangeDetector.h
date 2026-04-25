@@ -12,3 +12,7 @@ class ChangeDetector {
       T get() const;
       void reset(T value);
 };
+
+// ----------------------------------------------------- Objects -----------------------------------------------------
+
+extern ChangeDetector<int> section_selection;

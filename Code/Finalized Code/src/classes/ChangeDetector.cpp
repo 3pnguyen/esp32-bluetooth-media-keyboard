@@ -27,3 +27,7 @@ void ChangeDetector<T>::reset(T value) {
 template class ChangeDetector<int>;
 template class ChangeDetector<bool>;
 template class ChangeDetector<float>;
+
+// ----------------------------------------------------- Objects -----------------------------------------------------
+
+ChangeDetector<int> section_selection(0);

@@ -28,3 +28,10 @@ bool ReleaseDebounce::update() {
 bool ReleaseDebounce::isPressed() {
   return digitalRead(pin) == LOW;
 }
+
+// ----------------------------------------------------- Objects -----------------------------------------------------
+
+ReleaseDebounce button_one(BUTTON_1);
+ReleaseDebounce button_two(BUTTON_2);
+ReleaseDebounce button_three(BUTTON_3);
+ReleaseDebounce cycle_button(BUTTON_4);

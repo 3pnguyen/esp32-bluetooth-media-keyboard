@@ -29,3 +29,7 @@ bool EMAFilter<T>::aboveThreshold () {
 template class EMAFilter<int>;
 template class EMAFilter<bool>;
 template class EMAFilter<float>;
+
+// ----------------------------------------------------- Objects -----------------------------------------------------
+
+EMAFilter<float> voltage_ema(0.5, 3.65);

@@ -14,3 +14,7 @@ class EMAFilter {
     void reset();
     bool aboveThreshold ();
 };
+
+// ----------------------------------------------------- Objects -----------------------------------------------------
+
+extern EMAFilter<float> voltage_ema;
