@@ -12,10 +12,6 @@
 #include "classes/ChangeDetector.h"
 #include "classes/EMAFilter.h"
 
-//#define TEST
-
-//no need for a debounce class for the sleep button
-
 int section = 0;
 
 void setup() {
@@ -46,31 +42,31 @@ void setup() {
 }
 
 void loop() {
-  float voltage = (analogRead(POWER_VD) / ADC_MAX) * VREF * ((POWER_VD_R1 + POWER_VD_R2) / POWER_VD_R2);
-  voltage_ema.calculate(voltage);
-  int percent = voltageToPercent(voltage);
-  digitalWrite(INDICATOR_LED_R, (voltage_ema.aboveThreshold()) ? LOW : HIGH);
+  #ifndef TEST
 
-  if (digitalRead(SLEEP_BUTTON) == LOW) {
-    delay(100);
+    float voltage = (analogRead(POWER_VD) / ADC_MAX) * VREF * ((POWER_VD_R1 + POWER_VD_R2) / POWER_VD_R2);
+    voltage_ema.calculate(voltage);
+    int percent = voltageToPercent(voltage);
+    digitalWrite(INDICATOR_LED_R, (voltage_ema.aboveThreshold()) ? LOW : HIGH);
+
     if (digitalRead(SLEEP_BUTTON) == LOW) {
-      goToSleep();
-      wakeUp();
-    }
-  }
-
-  if (Keyboard.isConnected()) {
-    digitalWrite(INDICATOR_LED_B, LOW);
-
-    if (battery_level_update.isReady()) Keyboard.setBatteryLevel(percent);
-    
-    if (cycle_button.update()) {
-      section = (section + 1) % 2;
-      Serial.println("Section: " + String(section));
+      delay(100);
+      if (digitalRead(SLEEP_BUTTON) == LOW) {
+        goToSleep();
+        wakeUp();
+      }
     }
 
-    #ifdef TEST
-    #else
+    if (Keyboard.isConnected()) {
+      digitalWrite(INDICATOR_LED_B, LOW);
+
+      if (battery_level_update.isReady()) Keyboard.setBatteryLevel(percent);
+      
+      if (cycle_button.update()) {
+        section = (section + 1) % 2;
+        Serial.println("Section: " + String(section));
+      }
+
       if (section_selection.update(section)) indicator_led_incremental.reset();
       switch (section) {
         case 0:
@@ -93,19 +89,22 @@ void loop() {
           }
           break;
       }
-    #endif
 
-  } else {
-    digitalWrite(INDICATOR_LED_R, LOW);
-    digitalWrite(INDICATOR_LED_G, LOW);
+    } else {
+      digitalWrite(INDICATOR_LED_R, LOW);
+      digitalWrite(INDICATOR_LED_G, LOW);
 
-    if (bluetooth_led_flash.isReady()) digitalWrite(INDICATOR_LED_B, (digitalRead(INDICATOR_LED_B) == HIGH) ? LOW : HIGH);
+      if (bluetooth_led_flash.isReady()) digitalWrite(INDICATOR_LED_B, (digitalRead(INDICATOR_LED_B) == HIGH) ? LOW : HIGH);
 
-    if (null_reconnection.isReady()) {
-      null_reconnection.reset();
-      ESP.restart();
+      if (null_reconnection.isReady()) {
+        null_reconnection.reset();
+        ESP.restart();
+      }
     }
-  }
+
+  #else
+
+  #endif
 
   delay(5);
 }
