@@ -18,7 +18,7 @@ void IntervalTimer::reset() {
 
 // ----------------------------------------------------- Objects -----------------------------------------------------
 
-IntervalTimer bluetooth_led_flash(300);
-IntervalTimer indicator_led_flash(150);
-IntervalTimer null_reconnection(3000);
-IntervalTimer battery_level_update(1000);
+IntervalTimer bluetooth_led_flash(BLUETOOTH_LED_FLASH_INTERVAL);
+IntervalTimer indicator_led_flash(INDICATOR_LED_FLASH_INTERVAL);
+IntervalTimer null_reconnection(NULL_RECONNECTION_INTERVAL);
+IntervalTimer battery_level_update(BATTERY_LEVEL_UPDATE_INTERVAL);

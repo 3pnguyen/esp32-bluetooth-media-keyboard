@@ -8,4 +8,4 @@ void Incremental::reset(int new_value) {counter = new_value;}
 
 // ----------------------------------------------------- Objects -----------------------------------------------------
 
-Incremental indicator_led_incremental(0);
+Incremental indicator_led_incremental(INDICATOR_INITIAL_STATE);

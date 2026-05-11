@@ -1,5 +1,4 @@
-#ifndef PINS_H
-#define PINS_H
+#pragma once
 
 #define BUTTON_1 10 //D10
 #define BUTTON_2 9 //D9
@@ -10,5 +9,3 @@
 #define INDICATOR_LED_G 3 //D1
 #define INDICATOR_LED_B 6 //D4
 #define POWER_VD 4 //D2
-
-#endif

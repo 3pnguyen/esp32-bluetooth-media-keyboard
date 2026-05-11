@@ -1,5 +1,7 @@
 #pragma once
 
+#include "constants/instances.h"
+
 template <typename T>
 class ChangeDetector {
   private:

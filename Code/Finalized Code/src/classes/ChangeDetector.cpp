@@ -30,4 +30,4 @@ template class ChangeDetector<float>;
 
 // ----------------------------------------------------- Objects -----------------------------------------------------
 
-ChangeDetector<int> section_selection(0);
+ChangeDetector<int> section_selection(INITIAL_SET);

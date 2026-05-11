@@ -2,8 +2,8 @@
 #include <BleCombo.h>
 #include <driver/gpio.h>
 #include <esp_sleep.h>
-#include "battery.h"
-#include "pins.h"
+#include "constants/battery.h"
+#include "constants/pins.h"
 #include "functions.h"
 
 #include "classes/ReleaseDebounce.h"

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "constants/instances.h"
+
 class Incremental {
   public:
     int counter;

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Arduino.h>
+#include "constants/instances.h"
 
 class IntervalTimer {
   private:

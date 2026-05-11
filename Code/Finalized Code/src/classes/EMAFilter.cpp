@@ -32,4 +32,4 @@ template class EMAFilter<float>;
 
 // ----------------------------------------------------- Objects -----------------------------------------------------
 
-EMAFilter<float> voltage_ema(0.5, 3.65);
+EMAFilter<float> voltage_ema(BATTERY_SMOOTHING_FACTOR, BATTERY_THRESHOLD);

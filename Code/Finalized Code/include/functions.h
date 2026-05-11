@@ -4,8 +4,7 @@
 #include <BleCombo.h>
 #include <driver/gpio.h>
 #include <esp_sleep.h>
-#include "pins.h"
-
+#include "constants/pins.h"
 #include "classes/IntervalTimer.h" 
 
 void wakeUp();

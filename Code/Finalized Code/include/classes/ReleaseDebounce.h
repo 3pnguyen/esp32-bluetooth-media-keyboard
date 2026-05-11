@@ -1,7 +1,7 @@
 #pragma once
 
 #include <Arduino.h>
-#include "pins.h"
+#include "constants/pins.h"
 
 class ReleaseDebounce {
   private:
