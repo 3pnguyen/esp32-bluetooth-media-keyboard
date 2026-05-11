@@ -13,6 +13,8 @@
 #include "classes/EMAFilter.h"
 
 int section = 0;
+// Last battery percentage sent over BLE. Starts invalid so the first reading is always reported.
+int reportedBatteryPercent = -1;
 
 void setup() {
   pinMode(BUTTON_1, INPUT_PULLUP);
@@ -44,9 +46,11 @@ void setup() {
 void loop() {
   #ifndef TEST
 
-    float voltage = (analogRead(POWER_VD) / ADC_MAX) * VREF * ((POWER_VD_R1 + POWER_VD_R2) / POWER_VD_R2);
+    float pinVoltage = analogReadMilliVolts(POWER_VD) / 1000.0;
+    float voltage = pinVoltage * ((POWER_VD_R1 + POWER_VD_R2) / POWER_VD_R2);
     voltage_ema.calculate(voltage);
-    int percent = voltageToPercent(voltage);
+    // Use the filtered voltage for percent conversion; raw ADC readings can jitter enough to bounce the BLE level.
+    int percent = voltageToPercent(voltage_ema.level);
     digitalWrite(INDICATOR_LED_R, (voltage_ema.aboveThreshold()) ? LOW : HIGH);
 
     if (digitalRead(SLEEP_BUTTON) == LOW) {
@@ -60,7 +64,13 @@ void loop() {
     if (Keyboard.isConnected()) {
       digitalWrite(INDICATOR_LED_B, LOW);
 
-      if (battery_level_update.isReady()) Keyboard.setBatteryLevel(percent);
+      if (battery_level_update.isReady()) {
+        // Only report meaningful changes so the host does not see 1% oscillations around lookup-table boundaries.
+        if (reportedBatteryPercent < 0 || abs(percent - reportedBatteryPercent) >= BATTERY_REPORT_HYSTERESIS) {
+          reportedBatteryPercent = percent;
+          Keyboard.setBatteryLevel(reportedBatteryPercent);
+        }
+      }
       
       if (cycle_button.update()) {
         section = (section + 1) % 2;

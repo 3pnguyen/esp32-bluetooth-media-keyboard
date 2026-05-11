@@ -4,7 +4,7 @@
 #define INITIAL_SET 0
 
 // ----------------------------------------------------- EMAFilter -----------------------------------------------------
-#define BATTERY_SMOOTHING_FACTOR 0.5
+#define BATTERY_SMOOTHING_FACTOR 0.08
 #define BATTERY_THRESHOLD 3.65
 
 // ----------------------------------------------------- Incremental -----------------------------------------------------
