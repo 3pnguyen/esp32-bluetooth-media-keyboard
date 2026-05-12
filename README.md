@@ -1,8 +1,12 @@
-# esp32-bluetooth-media-keyboard (WIP)
+# esp32-bluetooth-media-keyboard 
 
 ## Electronic project that provides the same control as wireless earbuds.
 
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white) ![Arduino IDE](https://img.shields.io/badge/Arduino%20IDE-%2300979D.svg?style=for-the-badge&logo=Arduino&logoColor=white) ![KiCad](https://img.shields.io/badge/kicad-%23314CB0.svg?style=for-the-badge&logo=kicad&logoColor=white) ![PlatformIO](https://img.shields.io/badge/platformio-%23000.svg?style=for-the-badge&logo=platformio&logoColor=F5822A) ![Onshape](https://img.shields.io/badge/onshape-64bb58?style=for-the-badge&logo=onshape&logoColor=white)
+
+<div align="center">
+  <img src="Schematics/Finalized Schematic (V3)/images/irl.jpg" width="450" />
+</div>
 
 ## ✨ About
 
@@ -31,7 +35,7 @@ V2 was a big leap from the initial prototype. But it never ended up being create
 
 V3 took the pros out of the prototype and V2 - it made the perfect balance of cost and complexity.
 
-It was perfect that the project dragged out the way it did, because I ended up making it better than ever. Other than that, this project has becomne the benchmark for all of the progress I made in my first year of high school. Other than the project's repository, this is a time capsule for how far I've come - and I'll never forget that.
+It was perfect that the project dragged out the way it did, because I ended up making it better than ever. Other than that, this project has become the benchmark for all of the progress I made in my first year of high school. Other than the project's repository, this is a time capsule for how far I've come - and I'll never forget that.
 
 ## 📐 CAD
 
@@ -49,3 +53,5 @@ It was perfect that the project dragged out the way it did, because I ended up m
         </tr>
     </table>
 </div>
+
+I was too lazy to finish the CAD for V3   <3
