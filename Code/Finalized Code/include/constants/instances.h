@@ -11,7 +11,5 @@
 #define INDICATOR_INITIAL_STATE 0
 
 // ----------------------------------------------------- IntervalTimer -----------------------------------------------------
-#define BLUETOOTH_LED_FLASH_INTERVAL 300
-#define INDICATOR_LED_FLASH_INTERVAL 150
 #define NULL_RECONNECTION_INTERVAL 3000
 #define BATTERY_LEVEL_UPDATE_INTERVAL 1000

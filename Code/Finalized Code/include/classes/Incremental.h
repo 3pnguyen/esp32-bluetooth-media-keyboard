@@ -11,6 +11,5 @@ class Incremental {
     void reset(int new_value = 0);
 };
 
-// ----------------------------------------------------- Objects -----------------------------------------------------
-
-extern Incremental indicator_led_incremental;
+// THIS CLASS IS CURRENTLY NOT IN USE, IT HAS BECOME OBSOLETE SINCE CHANGING THE BRIGHTNESS ON THE LEDs
+// might have to remove later

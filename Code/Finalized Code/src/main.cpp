@@ -4,6 +4,7 @@
 #include <esp_sleep.h>
 #include "constants/battery.h"
 #include "constants/pins.h"
+#include "constants/led.h"
 #include "functions.h"
 
 #include "classes/ReleaseDebounce.h"
@@ -51,7 +52,9 @@ void loop() {
     voltage_ema.calculate(voltage);
     // Use the filtered voltage for percent conversion; raw ADC readings can jitter enough to bounce the BLE level.
     int percent = voltageToPercent(voltage_ema.level);
-    digitalWrite(INDICATOR_LED_R, (voltage_ema.aboveThreshold()) ? LOW : HIGH);
+    
+    if (voltage_ema.aboveThreshold()) digitalWrite(INDICATOR_LED_R, LOW);
+    else analogWrite(INDICATOR_LED_R, R_BRIGHTNESS);
 
     if (digitalRead(SLEEP_BUTTON) == LOW) {
       delay(100);
@@ -77,26 +80,19 @@ void loop() {
         Serial.println("Section: " + String(section));
       }
 
-      if (section_selection.update(section)) indicator_led_incremental.reset();
       switch (section) {
         case 0:
           if (button_one.update()) pressMediaKey(KEY_MEDIA_PLAY_PAUSE, "Play/Pause");
           else if (button_two.update()) pressMediaKey(KEY_MEDIA_PREVIOUS_TRACK, "Previous Track");
           else if (button_three.update()) pressMediaKey(KEY_MEDIA_NEXT_TRACK, "Next Track");
-          if (indicator_led_flash.isReady() && indicator_led_incremental.counter < 2) {
-            indicator_led_incremental.increment();
-            digitalWrite(INDICATOR_LED_G, (digitalRead(INDICATOR_LED_G) == HIGH) ? LOW : HIGH);
-          }
+          blinkLED(INDICATOR_LED_G, G_BRIGHTNESS, 1, INDICATOR_LED_FLASH_INTERVAL);
           break;
 
         case 1:
           if (button_one.update()) pressMediaKey(KEY_MEDIA_VOLUME_UP, "Volume Up");
           else if (button_two.update()) pressMediaKey(KEY_MEDIA_VOLUME_DOWN, "Volume Down");
           else if (button_three.update()) pressMediaKey(KEY_MEDIA_MUTE, "Mute");
-          if (indicator_led_flash.isReady() && indicator_led_incremental.counter < 4) {
-            indicator_led_incremental.increment();
-            digitalWrite(INDICATOR_LED_G, (digitalRead(INDICATOR_LED_G) == HIGH) ? LOW : HIGH);
-          }
+          blinkLED(INDICATOR_LED_G, G_BRIGHTNESS, 2, INDICATOR_LED_FLASH_INTERVAL);
           break;
       }
 
@@ -104,7 +100,7 @@ void loop() {
       digitalWrite(INDICATOR_LED_R, LOW);
       digitalWrite(INDICATOR_LED_G, LOW);
 
-      if (bluetooth_led_flash.isReady()) digitalWrite(INDICATOR_LED_B, (digitalRead(INDICATOR_LED_B) == HIGH) ? LOW : HIGH);
+      blinkLED(INDICATOR_LED_B, B_BRIGHTNESS, 1, BLUETOOTH_LED_FLASH_INTERVAL);      
 
       if (null_reconnection.isReady()) {
         null_reconnection.reset();

@@ -3,8 +3,6 @@
 void wakeUp() {
     setIndicatorLedHold(false);
     setIndicatorLedsOff();
-    bluetooth_led_flash.reset();
-    indicator_led_flash.reset();
     null_reconnection.reset();
     delay(20);
     Keyboard.begin();
@@ -66,4 +64,13 @@ int voltageToPercent(float v) {
         }
     }
     return 0;
+}
+
+void blinkLED(int ledPin, int brightness, int cycles, int delayMs) {
+    for (int i = 0; i < cycles; i++) {
+        analogWrite(ledPin, brightness);
+        delay(delayMs);
+        digitalWrite(ledPin, LOW);
+        delay(delayMs);
+    }
 }
