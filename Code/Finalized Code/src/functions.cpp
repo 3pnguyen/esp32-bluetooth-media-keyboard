@@ -24,10 +24,14 @@ void goToSleep() {
     gpio_wakeup_disable((gpio_num_t)SLEEP_BUTTON);
 }
 
+void setIndicatorLedOff(int ledPin) {
+    analogWrite(ledPin, 0);
+}
+
 void setIndicatorLedsOff() {
-    digitalWrite(INDICATOR_LED_R, LOW);
-    digitalWrite(INDICATOR_LED_G, LOW);
-    digitalWrite(INDICATOR_LED_B, LOW);
+    setIndicatorLedOff(INDICATOR_LED_R);
+    setIndicatorLedOff(INDICATOR_LED_G);
+    setIndicatorLedOff(INDICATOR_LED_B);
 }
 
 void setIndicatorLedHold(bool enabled) {
@@ -70,7 +74,7 @@ void blinkLED(int ledPin, int brightness, int cycles, int delayMs) {
     for (int i = 0; i < cycles; i++) {
         analogWrite(ledPin, brightness);
         delay(delayMs);
-        digitalWrite(ledPin, LOW);
+        setIndicatorLedOff(ledPin);
         delay(delayMs);
     }
 }

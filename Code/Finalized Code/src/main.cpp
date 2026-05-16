@@ -53,7 +53,7 @@ void loop() {
     // Use the filtered voltage for percent conversion; raw ADC readings can jitter enough to bounce the BLE level.
     int percent = voltageToPercent(voltage_ema.level);
     
-    if (voltage_ema.aboveThreshold()) digitalWrite(INDICATOR_LED_R, LOW);
+    if (voltage_ema.aboveThreshold()) setIndicatorLedOff(INDICATOR_LED_R);
     else analogWrite(INDICATOR_LED_R, R_BRIGHTNESS);
 
     if (digitalRead(SLEEP_BUTTON) == LOW) {
@@ -65,7 +65,7 @@ void loop() {
     }
 
     if (Keyboard.isConnected()) {
-      digitalWrite(INDICATOR_LED_B, LOW);
+      setIndicatorLedsOff();
 
       if (battery_level_update.isReady()) {
         // Only report meaningful changes so the host does not see 1% oscillations around lookup-table boundaries.
@@ -78,6 +78,7 @@ void loop() {
       if (cycle_button.update()) {
         section = (section + 1) % 2;
         Serial.println("Section: " + String(section));
+        blinkLED(INDICATOR_LED_G, G_BRIGHTNESS, section + 1, INDICATOR_LED_FLASH_INTERVAL);
       }
 
       switch (section) {
@@ -85,20 +86,18 @@ void loop() {
           if (button_one.update()) pressMediaKey(KEY_MEDIA_PLAY_PAUSE, "Play/Pause");
           else if (button_two.update()) pressMediaKey(KEY_MEDIA_PREVIOUS_TRACK, "Previous Track");
           else if (button_three.update()) pressMediaKey(KEY_MEDIA_NEXT_TRACK, "Next Track");
-          blinkLED(INDICATOR_LED_G, G_BRIGHTNESS, 1, INDICATOR_LED_FLASH_INTERVAL);
           break;
 
         case 1:
           if (button_one.update()) pressMediaKey(KEY_MEDIA_VOLUME_UP, "Volume Up");
           else if (button_two.update()) pressMediaKey(KEY_MEDIA_VOLUME_DOWN, "Volume Down");
           else if (button_three.update()) pressMediaKey(KEY_MEDIA_MUTE, "Mute");
-          blinkLED(INDICATOR_LED_G, G_BRIGHTNESS, 2, INDICATOR_LED_FLASH_INTERVAL);
           break;
       }
 
     } else {
-      digitalWrite(INDICATOR_LED_R, LOW);
-      digitalWrite(INDICATOR_LED_G, LOW);
+      setIndicatorLedOff(INDICATOR_LED_R);
+      setIndicatorLedOff(INDICATOR_LED_G);
 
       blinkLED(INDICATOR_LED_B, B_BRIGHTNESS, 1, BLUETOOTH_LED_FLASH_INTERVAL);      
 
