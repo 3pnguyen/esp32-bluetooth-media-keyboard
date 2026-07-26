@@ -1,4 +1,5 @@
 #include "functions.h"
+#include "constants/led.h"
 
 void wakeUp() {
     setIndicatorLedHold(false);
@@ -49,7 +50,14 @@ void setIndicatorLedHold(bool enabled) {
 void pressMediaKey(const uint8_t *key, String keyName, int debounce) {
     if (keyName != "") Serial.println("→ " + keyName);
     Keyboard.write(key);
+
+    analogWrite(INDICATOR_LED_R, R_BRIGHTNESS);
+    analogWrite(INDICATOR_LED_G, G_BRIGHTNESS);
+    analogWrite(INDICATOR_LED_B, B_BRIGHTNESS);
+
     delay(debounce);
+
+    setIndicatorLedsOff();
 }
 
 int voltageToPercent(float v) {

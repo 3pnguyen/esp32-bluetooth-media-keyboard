@@ -12,6 +12,6 @@ void goToSleep();
 void setIndicatorLedOff(int ledPin);
 void setIndicatorLedsOff();
 void setIndicatorLedHold(bool enabled);
-void pressMediaKey(const uint8_t *key, String keyName = "", int debounce = 50);
+void pressMediaKey(const uint8_t *key, String keyName = "", int debounce = 200);
 int voltageToPercent(float v);
 void blinkLED(int ledPin, int brightness, int cycles, int delayMs);
